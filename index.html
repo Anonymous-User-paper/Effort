@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Effort: Physically Plausible and Scene-aware Human Motion Generation with GRPO Reinforcement Learning</title>
+
+  <meta name="description" content="Anonymous project page." />
+  <meta name="author" content="Anonymous Authors" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="page">
+
+    <!-- Header -->
+    <section class="hero">
+      <h1>
+        Effort: Physically Plausible and Scene-aware Human Motion Generation with GRPO Reinforcement Learning
+      </h1>
+
+      <div class="authors">
+        <span>Anonymous Authors</span>
+      </div>
+
+      <div class="affiliations">
+        <p>Anonymous Institution</p>
+      </div>
+    </section>
+
+    <!-- Teaser Figure -->
+    <section class="teaser-section">
+      <img
+        src="assets/teaser.png"
+        alt="Project teaser"
+        class="teaser-image"
+      />
+
+      <p class="teaser-caption">
+        <strong>Scene- and physics-aware human motion generation.</strong>
+        Effort employs a novel physically plausible reward model for reinforcement learning,
+        fine-tuning existing HSI human motion generation models to produce outputs with
+        enhanced physical plausibility.
+      </p>
+    </section>
+
+    <!-- Abstract -->
+    <section class="section abstract-section">
+      <h2>Abstract</h2>
+
+      <div class="abstract-content">
+        <p>
+          Generating human motion from textual descriptions has advanced rapidly in recent
+          years. However, synthesizing motions that are both scene-aware and physically
+          plausible remains challenging in complex 3D environments. Existing physics-aware
+          solutions often rely on simulator-in-the-loop refinement, which can be
+          computationally expensive and difficult to scale. Moreover, when motion generation is
+          further conditioned on 3D scenes, enforcing contact and collision constraints becomes
+          substantially harder, making artifacts such as penetration and floating more
+          pronounced. To address these issues, we introduce <strong>Effort</strong>, a novel GRPO-based
+          reinforcement learning framework for physically consistent, scene-aware human
+          motion generation. Effort aligns a pretrained scene-conditioned motion diffusion
+          model with physical feasibility by optimizing a set of physics-consistency rewards
+          that explicitly quantify Human–Scene Interaction (HSI) quality. This alignment is
+          designed to encourage the model to increase the likelihood of physically feasible
+          motions while preserving semantic alignment to the input text and scene. By
+          leveraging group-relative optimization, Effort enables stable and efficient training
+          without value function learning or hard physical constraints. Experiments on
+          <strong>HUMANISE</strong> and <strong>Novel</strong> demonstrate significant improvement on physical plausibility
+          while maintaining consistently strong motion quality and text–motion alignment.
+        </p>
+      </div>
+    </section>
+
+    <!-- Method Figure -->
+    <section class="section method-section">
+      <h2>Method Overview</h2>
+
+      <img
+        src="assets/method.png"
+        alt="Method overview"
+        class="method-image"
+      />
+
+      <p class="caption">
+        <strong>Overview of our method.</strong> The left part illustrates our group-relative physics alignment
+        reinforcement learning framework. The right part shows the construction and training
+        process of the EffortFormer module.
+      </p>
+    </section>
+
+    <!-- Video Results -->
+    <section class="section video-section">
+      <h2>Video Results</h2>
+
+      <div class="video-grid">
+
+        <div class="video-card">
+          <video controls playsinline>
+            <source src="assets/afford_feet.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p>walk to the door - Afford</p>
+        </div>
+
+        <div class="video-card">
+          <video controls playsinline>
+            <source src="assets/effort_feet.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p>walk to the door - Effort (Ours)</p>
+        </div>
+
+        <div class="video-card">
+          <video controls playsinline>
+            <source src="assets/afford_lie.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p>lie down on the bed - Afford</p>
+        </div>
+
+        <div class="video-card">
+          <video controls playsinline>
+            <source src="assets/effort_lie.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p>lie down on the bed - Effort (Ours)</p>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Anonymous Authors. Project page for anonymous review.</p>
+    </footer>
+
+  </main>
+</body>
+</html>
